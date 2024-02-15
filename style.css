@@ -1,22 +1,19 @@
-html {
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #7BAFD4; /* Carolina Blue background */
     color: #FFFFFF;
-    margin: 0;
-    padding: 0;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
-    min-height: 100vh;
-    overflow: hidden; /* Hide overflow */
 }
 
 .container {
@@ -27,9 +24,8 @@ body {
     max-width: 600px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 1em;
-    margin: auto;
-    position: relative; /* Important for absolute positioning of child elements */
+    padding: 1em; /* Adjust as needed */
+    margin: 0 auto; /* Center in the viewport with no vertical margins */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,56 +33,46 @@ body {
 }
 
 .logo-container {
+    margin: 0 auto 1em; /* Remove top margin, add bottom margin */
     width: 150px;
     height: 150px;
-    margin-bottom: 1em; /* Adjust the margin as necessary */
-    position: relative; /* Logo will position itself relative to container */
+    position: relative; /* Keep the logo in flow to maintain space */
+    display: flex; /* Use flex to center the logo-background and logo */
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-background {
     background-color: #FFFFFF;
     border-radius: 50%;
-    width: 100%;
+    width: 100%; /* Full size of the logo-container */
     height: 100%;
-    position: absolute; /* Positioned absolutely relative to logo-container */
+    position: absolute; /* Positioned absolutely to overlay */
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 0; /* Below the logo image */
 }
 
 .logo {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    width: 100%; /* Full size of the logo-container */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Above the logo background */
 }
 
 button[type="button"] {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #4A90E2;
-    color: #FFFFFF;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    /* Button styles */
 }
 
-button[type="button"]:hover {
-    background-color: #357ABD;
-}
-
-/* Adjustments for smaller screens */
+/* Media Queries for Responsive Adjustments */
 @media (max-width: 768px) {
     .logo-container {
         width: 120px; /* Smaller logo on mobile */
         height: 120px;
     }
-    
+
     .container {
         padding: 1em; /* Less padding on mobile */
     }
+
+    /* Additional mobile styles if needed */
 }
