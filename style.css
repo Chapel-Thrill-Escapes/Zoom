@@ -1,23 +1,22 @@
-html, body {
+html {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #7BAFD4; /* Carolina Blue background */
     color: #FFFFFF;
-    text-align: center;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
     min-height: 100vh;
+    overflow: hidden; /* Hide overflow */
 }
 
 .container {
@@ -29,32 +28,39 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 1em;
+    margin: auto;
+    position: relative; /* Important for absolute positioning of child elements */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1em 0; /* Vertical spacing */
 }
 
 .logo-container {
-    width: 150px; /* Fixed size for the logo */
-    height: 150px; /* Fixed size for the logo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1em; /* Bottom margin for spacing */
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1em; /* Adjust the margin as necessary */
+    position: relative; /* Logo will position itself relative to container */
 }
 
 .logo-background {
     background-color: #FFFFFF;
     border-radius: 50%;
-    width: 100%; /* Fill the logo container */
+    width: 100%;
     height: 100%;
+    position: absolute; /* Positioned absolutely relative to logo-container */
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
 .logo {
-    width: 80%; /* Adjust logo size as needed, recommended to be less than 100% */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 button[type="button"] {
@@ -70,23 +76,17 @@ button[type="button"] {
 }
 
 button[type="button"]:hover {
-    background-color: #357ABD; /* Darker shade on hover for feedback */
+    background-color: #357ABD;
 }
 
-/* Media Queries for Responsive Adjustments */
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
     .logo-container {
         width: 120px; /* Smaller logo on mobile */
         height: 120px;
     }
-
+    
     .container {
-        width: 90%; /* Adjust width as needed */
         padding: 1em; /* Less padding on mobile */
-    }
-
-    button[type="button"] {
-        padding: 8px 16px; /* Slightly smaller padding on mobile */
-        font-size: 14px; /* Slightly smaller font size on mobile */
     }
 }
