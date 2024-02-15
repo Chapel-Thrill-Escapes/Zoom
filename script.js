@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Optionally, collect and send any additional data with the request
         var formData = new FormData(); // Adjust based on your needs
 
-        // Replace 'YOUR_SCRIPT_ID' with the actual ID of your Google Apps Script
         fetch('https://script.google.com/macros/s/AKfycbyuGbm6fFtzdbhauomcvwxkBRvg_w2IeybO4UJ8baEGnZD7lP6SDRjc5zwwSayWCKBgHA/exec', {
             method: 'POST',
             body: formData
