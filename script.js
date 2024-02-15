@@ -1,4 +1,4 @@
-<script>
+
 document.addEventListener('DOMContentLoaded', function() {
     var form = document.querySelector('form');
     form.onsubmit = function(e) {
@@ -27,4 +27,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 });
-</script>
