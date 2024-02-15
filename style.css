@@ -56,7 +56,7 @@ input[type="text"] {
     width: 30%; /* Set the width to 30% of the container */
 }
 
-button[type="submit"] {
+button[type="button"] {
     margin-top: 10px; /* Add spacing below the dish input */
     padding: 10px 20px;
     border: none;
