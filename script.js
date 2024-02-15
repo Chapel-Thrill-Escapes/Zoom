@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var formData = new FormData();
         // Populate formData as needed, e.g., formData.append('key', 'value');
 
-        fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbyuGbm6fFtzdbhauomcvwxkBRvg_w2IeybO4UJ8baEGnZD7lP6SDRjc5zwwSayWCKBgHA/exec', {
             method: 'POST',
             body: formData
         })
