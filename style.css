@@ -5,41 +5,41 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    height: 100vh; /* Make the body take up the full height of the viewport */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    min-height: 100vh; /* Full height of the viewport */
 }
 
 .container {
     background-color: #FFFFFF; /* White background for content */
     color: #333333; /* Dark text for readability */
     border-radius: 8px;
-    padding: 40px; /* Increased padding for better spacing */
+    padding: 2em; /* Responsive padding */
     width: 90%; /* Make the container responsive */
-    max-width: 600px; /* Maximum width to ensure content does not stretch too much on larger screens */
-    margin: 20px auto; /* Center the container and add margin on the top and bottom */
+    max-width: 600px; /* Maximum width to ensure content doesn't stretch too much on larger screens */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 .logo-container {
-    margin-bottom: 20px; /* Add some space below the logo */
+    position: relative;
+    width: 150px; /* Fixed size for the logo */
+    height: 150px; /* Fixed size for the logo */
 }
 
 .logo-background {
     background-color: #FFFFFF;
     border-radius: 50%;
-    width: 150px; /* Adjusted for a simpler approach */
-    height: 150px; /* Adjusted for a simpler approach */
+    width: 100%; /* Adjusted for a simpler approach */
+    height: 100%; /* Adjusted for a simpler approach */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+    top: 0;
+    left: 0;
 }
 
 .logo {
-    width: 150px; /* Ensure the logo fits within the background circle */
+    width: 100%; /* Ensure the logo fits within the background circle */
     position: relative;
     z-index: 1;
 }
@@ -49,29 +49,25 @@ button[type="button"] {
     font-size: 16px; /* Larger font size for better readability */
     font-weight: bold; /* Make the button text bold */
     background-color: #4A90E2; /* A different shade for contrast */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    color: #FFFFFF;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
 }
 
-button[type="button"]:hover, button[type="button"]:focus {
-    background-color: #357ABD; /* Darker shade on hover/focus for feedback */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Larger shadow on hover/focus */
+button[type="button"]:hover {
+    background-color: #357ABD; /* Darker shade on hover for feedback */
 }
 
-/* Responsive adjustments */
+/* Media query for smaller screens */
 @media (max-width: 768px) {
     .container {
         width: 95%; /* Allow more margin on smaller screens */
-        padding: 20px; /* Adjust padding on smaller screens */
     }
 
-    .logo-background, .logo {
-        width: 120px; /* Scale down the logo and its background on smaller screens */
+    .logo-container {
+        width: 120px; /* Scale down the logo container on smaller screens */
         height: 120px;
-    }
-
-    button[type="button"] {
-        padding: 10px 20px; /* Adjust button padding on smaller screens */
-        font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
