@@ -39,7 +39,7 @@ body {
 .logo-container {
     width: 150px;
     height: 150px;
-    margin-bottom: 1em; /* Adjust the margin as necessary */
+    margin-bottom: 13em; /* Adjust the margin as necessary */
     position: relative; /* Logo will position itself relative to container */
 }
 
@@ -77,10 +77,4 @@ button[type="button"] {
 
 button[type="button"]:hover {
     background-color: #357ABD;
-}
-
-@media (max-width: 768px) {
-    .logo-container {
-        margin-bottom: 13em; /* Add margin-bottom to create space between the logo and the white box */
-    }
 }
