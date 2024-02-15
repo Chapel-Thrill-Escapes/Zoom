@@ -79,7 +79,7 @@ button[type="button"]:hover {
     background-color: #357ABD;
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-device-width: 1000px) {
     .logo-container {
         margin-bottom: 1em;
     }
