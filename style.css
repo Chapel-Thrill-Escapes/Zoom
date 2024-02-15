@@ -78,3 +78,9 @@ button[type="button"] {
 button[type="button"]:hover {
     background-color: #357ABD;
 }
+
+@media (orientation: landscape) {
+    .logo-container {
+        margin-bottom: 1em; /* Add margin-bottom to create space between the logo and the white box */
+    }
+}
