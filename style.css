@@ -1,49 +1,62 @@
-body, html {
-    height: 100%; /* Ensure the html element is also set to full height */
+html {
+    height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling on the entire page */
+    overflow: hidden;
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #7BAFD4; /* Carolina Blue background */
     color: #FFFFFF;
-    text-align: center;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
+    min-height: 100vh;
+    overflow: hidden; /* Hide overflow */
 }
 
 .container {
     background-color: #FFFFFF; /* White background for content */
     color: #333333; /* Dark text for readability */
     border-radius: 8px;
-    padding: 1em; /* Adjusted padding */
-    margin: 1em; /* Add margin to ensure spacing */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    width: auto; /* Allow container to size based on content */
-    max-width: 600px; /* Maximum width to avoid stretching on larger screens */
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1em;
+    margin: auto;
+    position: relative; /* Important for absolute positioning of child elements */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-container {
-    margin-bottom: 1em; /* Space below the logo */
-}
-
-.logo-background, .logo {
-    width: 150px; /* Set a fixed size for the logo and background */
-    height: 150px; /* Set a fixed size for the logo and background */
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1em; /* Adjust the margin as necessary */
+    position: relative; /* Logo will position itself relative to container */
 }
 
 .logo-background {
     background-color: #FFFFFF;
     border-radius: 50%;
-    position: relative;
-    z-index: 0; /* Set z-index to 0 to ensure it's under the logo */
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Positioned absolutely relative to logo-container */
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
 .logo {
+    width: 100%;
+    height: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -66,15 +79,14 @@ button[type="button"]:hover {
     background-color: #357ABD;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
-    .logo-background, .logo {
-        width: 120px; /* Scale down the logo and background on smaller screens */
+    .logo-container {
+        width: 120px; /* Smaller logo on mobile */
         height: 120px;
     }
     
     .container {
-        margin-top: 20px; /* Add some top margin on smaller screens */
-        margin-bottom: 20px; /* Add some bottom margin on smaller screens */
+        padding: 1em; /* Less padding on mobile */
     }
 }
