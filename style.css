@@ -6,6 +6,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2vw; /* Base font-size on the width of the viewport */
 }
 
 body {
@@ -25,20 +26,19 @@ body {
     color: #333333; /* Dark text for readability */
     border-radius: 8px;
     width: 90%;
-    max-width: 600px;
+    max-width: 45em; /* Larger max-width based on em units for better scaling */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 1em;
+    padding: 1em; /* Padding based on em */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1em 0; /* Vertical spacing */
 }
 
 .logo-container {
-    width: 150px; /* Fixed size for the logo */
-    height: 150px; /* Fixed size for the logo */
+    width: 15em; /* Fixed size for the logo based on em */
+    height: 15em; /* Fixed size for the logo based on em */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,8 +58,8 @@ body {
 }
 
 button[type="button"] {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 0.5em 1em; /* Padding based on em */
+    font-size: 1.5em; /* Larger font size based on em */
     font-weight: bold;
     background-color: #4A90E2;
     color: #FFFFFF;
@@ -75,18 +75,21 @@ button[type="button"]:hover {
 
 /* Media Queries for Responsive Adjustments */
 @media (max-width: 768px) {
+    html {
+        font-size: 4vw; /* Increase base font-size on smaller screens */
+    }
+
     .logo-container {
-        width: 120px; /* Smaller logo on mobile */
-        height: 120px;
+        width: 12em; /* Smaller logo on mobile */
+        height: 12em;
     }
 
     .container {
-        width: 90%; /* Adjust width as needed */
-        padding: 1em; /* Less padding on mobile */
+        padding: 1em; /* Adjust padding on smaller screens */
     }
 
     button[type="button"] {
-        padding: 8px 16px; /* Slightly smaller padding on mobile */
-        font-size: 14px; /* Slightly smaller font size on mobile */
+        padding: 0.5em 1em; /* Adjust button padding on smaller screens */
+        font-size: 1.2em; /* Adjust font size on smaller screens */
     }
 }
