@@ -20,19 +20,22 @@ body {
     width: 90%; /* Make the container responsive */
     max-width: 600px; /* Maximum width to ensure content doesn't stretch too much on larger screens */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 20px; /* Space below the container */
 }
 
 .logo-container {
     position: relative;
-    width: 150px; /* Fixed size for the logo */
-    height: 150px; /* Fixed size for the logo */
+    display: inline-block; /* Allows for automatic centering in the parent */
+    width: 150px; /* Fixed width for the logo */
+    height: 150px; /* Fixed height for the logo */
+    margin-bottom: 1em; /* Space below the logo */
 }
 
 .logo-background {
     background-color: #FFFFFF;
     border-radius: 50%;
-    width: 100%; /* Adjusted for a simpler approach */
-    height: 100%; /* Adjusted for a simpler approach */
+    width: 100%; /* Use 100% to automatically match the parent's size */
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -40,6 +43,7 @@ body {
 
 .logo {
     width: 100%; /* Ensure the logo fits within the background circle */
+    height: auto; /* Maintain the aspect ratio */
     position: relative;
     z-index: 1;
 }
@@ -60,14 +64,19 @@ button[type="button"]:hover {
     background-color: #357ABD; /* Darker shade on hover for feedback */
 }
 
-/* Media query for smaller screens */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    .container {
-        width: 95%; /* Allow more margin on smaller screens */
-    }
-
     .logo-container {
         width: 120px; /* Scale down the logo container on smaller screens */
         height: 120px;
+    }
+    
+    .container {
+        padding: 1em; /* Less padding on smaller screens */
+    }
+    
+    button[type="button"] {
+        padding: 10px 20px; /* Adjust button padding on smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
