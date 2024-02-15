@@ -10,17 +10,17 @@ body {
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     min-height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Hide overflow to prevent scrolling */
 }
 
 .container {
     background-color: #FFFFFF; /* White background for content */
     color: #333333; /* Dark text for readability */
     border-radius: 8px;
-    padding: 2em; /* Responsive padding */
+    padding: 1em; /* Reduced padding */
     width: 90%; /* Make the container responsive */
     max-width: 600px; /* Maximum width to ensure content doesn't stretch too much on larger screens */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    margin-bottom: 20px; /* Space below the container */
 }
 
 .logo-container {
@@ -28,7 +28,7 @@ body {
     display: inline-block; /* Allows for automatic centering in the parent */
     width: 150px; /* Fixed width for the logo */
     height: 150px; /* Fixed height for the logo */
-    margin-bottom: 1em; /* Space below the logo */
+    margin-bottom: 0.5em; /* Reduced space below the logo */
 }
 
 .logo-background {
@@ -49,8 +49,8 @@ body {
 }
 
 button[type="button"] {
-    padding: 12px 24px; /* Increased padding for a larger clickable area */
-    font-size: 16px; /* Larger font size for better readability */
+    padding: 10px 20px; /* Adjusted padding for the button */
+    font-size: 16px; /* Font size for better readability */
     font-weight: bold; /* Make the button text bold */
     background-color: #4A90E2; /* A different shade for contrast */
     color: #FFFFFF;
