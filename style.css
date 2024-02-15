@@ -81,6 +81,6 @@ button[type="button"]:hover {
 
 @media (max-width: 768px) {
     .logo-container {
-        margin-bottom: 2em; /* Add margin-bottom to create space between the logo and the white box */
+        margin-bottom: 13em; /* Add margin-bottom to create space between the logo and the white box */
     }
 }
